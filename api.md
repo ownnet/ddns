@@ -1,49 +1,48 @@
 ## API
 #### getip
-»ñÈ¡¹«Íø³ö¿ÚIP£¬ÎŞĞè²ÎÊı
+è·å–å…¬ç½‘å‡ºå£IPï¼Œæ— éœ€å‚æ•°
 #### gettime
-»ñÈ¡·şÎñÆ÷Ê±¼ä´Á£¬ÓÃÓÚ±àÂëÈÏÖ¤ĞÅÏ¢£¬ÎŞĞè²ÎÊı£¬ÓĞµ÷ÓÃÆµÂÊÏŞÖÆ
+è·å–æœåŠ¡å™¨æ—¶é—´æˆ³ï¼Œç”¨äºç¼–ç è®¤è¯ä¿¡æ¯ï¼Œæ— éœ€å‚æ•°ï¼Œæœ‰è°ƒç”¨é¢‘ç‡é™åˆ¶
 #### getuserinfo
-»ñÈ¡ÓÃ»§ĞÅÏ¢£¬²ÎÊıÎªtoken=ÓÃ»§µÇÂ½Ê±·µ»ØµÄtoken
+è·å–ç”¨æˆ·ä¿¡æ¯ï¼Œå‚æ•°ä¸ºtoken=ç”¨æˆ·ç™»é™†æ—¶è¿”å›çš„token
 #### getdomaininfo
-»ñÈ¡Ö¸¶¨ÓòÃûĞÅÏ¢£¬²ÎÊıÎªtoken=ÓÃ»§µÇÂ½Ê±·µ»ØµÄtoken&domian=sample.com
+è·å–æŒ‡å®šåŸŸåä¿¡æ¯ï¼Œå‚æ•°ä¸ºtoken=ç”¨æˆ·ç™»é™†æ—¶è¿”å›çš„token&domian=sample.com
 #### getauthcode
-½ö»ñÈ¡Ö¸¶¨ÓòÃûĞÅÏ¢ÖĞµÄauth_code×Ö¶Î£¬²ÎÊıÍ¬getdomaininfo
+ä»…è·å–æŒ‡å®šåŸŸåä¿¡æ¯ä¸­çš„auth_codeå­—æ®µï¼Œå‚æ•°åŒgetdomaininfo
 #### getdomainlist
-»ñÈ¡ÓÃ»§ËùÓµÓĞµÄËùÓĞÓòÃû£¬²ÎÊıÎªtoken=ÓÃ»§µÇÂ½Ê±·µ»ØµÄtoken
+è·å–ç”¨æˆ·æ‰€æ‹¥æœ‰çš„æ‰€æœ‰åŸŸåï¼Œå‚æ•°ä¸ºtoken=ç”¨æˆ·ç™»é™†æ—¶è¿”å›çš„token
 #### update
-Ïò·şÎñÆ÷Ìá½»Ö¸¶¨ÓòÃûËùÖ¸ÏòµÄip£¬Í¨¹ıget²ÎÊıversionÇø·Ö²»Í¬µÄ·½Ê½
-#####£¨1£©version=safe
+å‘æœåŠ¡å™¨æäº¤æŒ‡å®šåŸŸåæ‰€æŒ‡å‘çš„ipï¼Œé€šè¿‡getå‚æ•°versionåŒºåˆ†ä¸åŒçš„æ–¹å¼
+#####ï¼ˆ1ï¼‰version=safe
 `http://yourdomain.com/api/update?version=safe`
-post²ÎÊıÎªauth=Ê±¼äÈÏÖ¤Âë£»ip=µ±Ç°¹«Íø³ö¿ÚIP  £»domain=ÓòÃû  
-Ê±¼äÈÏÖ¤Âë¿ÉÍ¨¹ıgetauthcode·½Ê½»ñÈ¡auth_code²¢¸ù¾İÊ±¼ä´Á¼ÆËãÈ¡µÃ
-·µ»ØÖµ£º(string)'success'|(json)error_info
-#####£¨2£©version=username
-`http://yourdomain.com/api/update?version=username&domain=ÓòÃû&ip=¹«Íøip&username=ÓÃ»§Ãû&password=ÃÜÂë`
-ÆäËûget²ÎÊı£ºdomain=__HOSTNAME__&ip=__MYIP__&user=__USERNAME__&password=__PASSWORD__
-·µ»ØÖµ£º(string)'success'|(json)error_info
-£¨¸Ã·½·¨ÓĞĞ¹Â¶ÓÃ»§ÃûÃÜÂë·çÏÕ£¬É÷ÓÃ£©
-#####£¨3£©version=authcode
-`http://yourdomain.com/api/update?version=authcode&auth=auth_code&domain=ÓòÃû&ip=¹«Íøip`
-ÆäËûget²ÎÊı£ºauth=auth_code; domain=ÓòÃû£»ip=¹«Íøip
-·µ»ØÖµ£º(string)'success'|(json)error_info
-£¨¸Ã·½·¨ÓĞĞ¹Â¶µ±Ç°ÓòÃûÈÏÖ¤ĞÅÏ¢µÄ·çÏÕ£©
+postå‚æ•°ä¸ºauth=æ—¶é—´è®¤è¯ç ï¼›ip=å½“å‰å…¬ç½‘å‡ºå£IP  ï¼›domain=åŸŸå  
+æ—¶é—´è®¤è¯ç å¯é€šè¿‡getauthcodeæ–¹å¼è·å–auth_codeå¹¶æ ¹æ®æ—¶é—´æˆ³è®¡ç®—å–å¾—
+è¿”å›å€¼ï¼š(string)'success'|(json)error_info
+#####ï¼ˆ2ï¼‰version=username
+`http://yourdomain.com/api/update?version=username&domain=åŸŸå&ip=å…¬ç½‘ip&username=ç”¨æˆ·å&password=å¯†ç `
+å…¶ä»–getå‚æ•°ï¼šdomain=__HOSTNAME__&ip=__MYIP__&user=__USERNAME__&password=__PASSWORD__
+è¿”å›å€¼ï¼š(string)'success'|(json)error_info
+ï¼ˆè¯¥æ–¹æ³•æœ‰æ³„éœ²ç”¨æˆ·åå¯†ç é£é™©ï¼Œæ…ç”¨ï¼‰
+#####ï¼ˆ3ï¼‰version=authcode
+`http://yourdomain.com/api/update?version=authcode&auth=auth_code&domain=åŸŸå&ip=å…¬ç½‘ip`
+å…¶ä»–getå‚æ•°ï¼šauth=auth_code; domain=åŸŸåï¼›ip=å…¬ç½‘ip
+è¿”å›å€¼ï¼š(string)'success'|(json)error_info
+ï¼ˆè¯¥æ–¹æ³•æœ‰æ³„éœ²å½“å‰åŸŸåè®¤è¯ä¿¡æ¯çš„é£é™©ï¼‰
 
 #### auth
-Ïò·şÎñÆ÷post·½Ê½Ìá½»ÓÃ»§Ãû/ÃÜÂë  
-²ÎÊıÎªuser=xxx;password=xxx
-·µ»ØÖµ£º(string)'err'|token_code
+å‘æœåŠ¡å™¨postæ–¹å¼æäº¤ç”¨æˆ·å/å¯†ç   
+å‚æ•°ä¸ºuser=xxx;password=xxx
+è¿”å›å€¼ï¼š(string)'err'|token_code
 #### keepalive
-Ïò·şÎñÆ÷·¢ËÍĞÄÌø°ü£¬post·½Ê½£¬²ÎÊıÎªtoken=ÓÃ»§token  
+å‘æœåŠ¡å™¨å‘é€å¿ƒè·³åŒ…ï¼Œpostæ–¹å¼ï¼Œå‚æ•°ä¸ºtoken=ç”¨æˆ·token  
 
-## ÆäËûËµÃ÷
-#### auth_code Éú³É
-MD5£¨'auth' + time + rand(10000,99999))
-#### Ê±¼äÈÏÖ¤Âë¼ÆËã·½·¨
-Ê±¼äÈÏÖ¤Âë¼ÆËã·½·¨ÈçÏÂ£º
-1. ¿Í»§¶ËÆô¶¯Ê±£¬´Ó·şÎñÆ÷»ñÈ¡·şÎñÆ÷µÄÊ±¼ä´Á£¬Óë±¾µØÊ±¼ä×ö²î²¢¼ÇÂ¼¸ÃÊ±¼äÆ«ÒÆÁ¿
-2. ¼ÆËã·şÎñÆ÷Ê±¼ätime=±¾µØÊ±¼ä+Ê±¼äÆ«ÒÆÁ¿
-3. ¼ÆËãÈÏÖ¤ĞÅÏ¢£ºauth = md5((int)time/30 + (string)auth_code)
-4. Ïò·şÎñÆ÷postĞÅÏ¢£¬°üÀ¨ÒÔÏÂ×Ö¶Î£ºauth,domain,ip£»·şÎñÆ÷¶Ë½«£¨×î¶à£©¼ì²éÌá½»Ê±¼äÇ°/ºó1¸öÊ±¼äÆ¬µÄauthÖµ
-5. ¸ù¾İ·µ»ØÖµÖØ¸´µÚ2~4²½»ò·µ»Ø´íÎóĞÅÏ¢
-
+## å…¶ä»–è¯´æ˜
+#### auth_code ç”Ÿæˆ
+MD5ï¼ˆ'auth' + time + rand(10000,99999))
+#### æ—¶é—´è®¤è¯ç è®¡ç®—æ–¹æ³•
+æ—¶é—´è®¤è¯ç è®¡ç®—æ–¹æ³•å¦‚ä¸‹ï¼š
+1. å®¢æˆ·ç«¯å¯åŠ¨æ—¶ï¼Œä»æœåŠ¡å™¨è·å–æœåŠ¡å™¨çš„æ—¶é—´æˆ³ï¼Œä¸æœ¬åœ°æ—¶é—´åšå·®å¹¶è®°å½•è¯¥æ—¶é—´åç§»é‡
+2. è®¡ç®—æœåŠ¡å™¨æ—¶é—´time=æœ¬åœ°æ—¶é—´+æ—¶é—´åç§»é‡
+3. è®¡ç®—è®¤è¯ä¿¡æ¯ï¼šauth = md5((int)time/30 + (string)auth_code)
+4. å‘æœåŠ¡å™¨postä¿¡æ¯ï¼ŒåŒ…æ‹¬ä»¥ä¸‹å­—æ®µï¼šauth,domain,ipï¼›æœåŠ¡å™¨ç«¯å°†ï¼ˆæœ€å¤šï¼‰æ£€æŸ¥æäº¤æ—¶é—´å‰/å1ä¸ªæ—¶é—´ç‰‡çš„authå€¼
+5. æ ¹æ®è¿”å›å€¼é‡å¤ç¬¬2~4æ­¥æˆ–è¿”å›é”™è¯¯ä¿¡æ¯
